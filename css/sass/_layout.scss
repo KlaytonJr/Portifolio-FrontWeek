@@ -5,6 +5,8 @@
     display: flex;
     justify-content: space-between;
 
+    position: fixed;
+
     padding: 48px 16px;
 }
 
@@ -49,7 +51,7 @@
 }
 
 .hero {
-    height: 90vh;
+    height: 100vh;
 }
 
 @media screen and (max-width: 960px) {
@@ -64,6 +66,7 @@
 
 .container-item:nth-child(1) {
     flex-grow: 3;
+    max-width: 680px;
 
     display: flex;
     flex-direction: column;
@@ -81,6 +84,7 @@
 
     img {
         max-width: 400px;
+        display: none;
     }
 }
 
@@ -100,6 +104,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+    .svg-hero {
+        transform: scale(1.5);
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -128,13 +138,15 @@
 
     position: relative;
 
+    z-index: 1;
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
     a {
 
-        z-index: 1;
+        z-index: 3;
 
         &:hover {
             & + .img-project {
@@ -154,7 +166,7 @@
     left: 50%;
 
     transition: .5s ease;
-    z-index: 0;
+    z-index: 2;
 
     opacity: 0;
 
@@ -192,3 +204,71 @@
     //         stroke-dashoffset: 1000;
     //     }
     // }
+
+// Animations
+#square1min {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 4s ease infinite alternate;
+}
+#square2min {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 5s ease infinite alternate;
+}
+#square3min {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 6s ease infinite alternate;
+}
+#square4min {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 7s ease infinite alternate;
+}
+#square5min {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 8s ease infinite alternate;
+}
+
+#square5 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: fullRotate 30s ease infinite;
+}
+
+#square3 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 8s ease infinite alternate;
+}
+#square2 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 8s ease infinite alternate;
+}
+#square1 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rotate 8s ease infinite alternate;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(60deg);
+    }
+}
+
+@keyframes fullRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
