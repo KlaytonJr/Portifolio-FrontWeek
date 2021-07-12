@@ -12,6 +12,8 @@ a {
     padding: 8px 24px;
     font-size: 24px;
 
+    display: inline-block;
+
     transition: .5s ease;
 
     position: relative;
@@ -93,6 +95,7 @@ h6 {
 }
 
 .text-center {
+    width: 100%;
     text-align: center;
 }
 
@@ -123,7 +126,7 @@ h6 {
         width: 120px;
         height: 120px;
 
-        transform: translate(-5%, -22%) rotate(45deg);
+        transform: translate(0%, -15%) rotate(60deg);
 
         background: linear-gradient(225deg, #2DC7ED 0%, rgba(83, 139, 240, 0) 100%);
     
@@ -133,7 +136,7 @@ h6 {
 
     &:hover{
         &::after{
-            transform: translate(-5%, -22%) rotate(60deg);
+            transform: translate(0%, -15%) rotate(360deg);
         }
     }
 }
